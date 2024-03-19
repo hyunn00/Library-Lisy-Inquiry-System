@@ -22,7 +22,10 @@ def fopen(fname) :
     
     booklist = []
     for i in range(0, 10) :
+        # Window file encoding
         f = open('%s' % fname, 'r', encoding='cp949')
+        # Linux file encoding
+        # f = open('%s' % fname, 'r', encoding='EUC-KR')
         data = csv.reader(f)
         header = next(data)
 
